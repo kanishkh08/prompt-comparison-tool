@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "title": "Explain photosynthesis",
+    "task": "Explain photosynthesis.",
+    "role": "a friendly biology teacher",
+    "context": "The explanation is for a Class 8 student who is learning this for the first time.",
+    "constraints": [
+      "Keep the answer under 80 words.",
+      "Use one simple everyday analogy.",
+      "Do not add an introduction or a conclusion.",
+      "Use exactly 3 bullet points."
+    ],
+    "output_format": "Exactly 3 bullet points, each starting with '-'.",
+    "checks": {
+      "max_words": 80,
+      "bullets": 3,
+      "no_intro": true
+    },
+    "basic_output": "Photosynthesis is the process by which green plants, algae and some bacteria convert light energy, usually from the sun, into chemical energy stored in glucose. It takes place mainly in the chloroplasts of plant cells, which contain a green pigment called chlorophyll. During the light-dependent reactions, chlorophyll absorbs sunlight and uses it to split water molecules, releasing oxygen as a by-product and producing energy carriers like ATP and NADPH. In the Calvin cycle, these energy carriers are then used to convert carbon dioxide from the air into glucose. The overall equation is 6CO2 + 6H2O + light energy -> C6H12O6 + 6O2. Photosynthesis is essential for life on Earth because it produces the oxygen we breathe and forms the base of most food chains.",
+    "improved_output": "- Plants are like tiny kitchens: leaves take in sunlight, water and carbon dioxide to cook their own food (sugar).\n- Chlorophyll, the green stuff in leaves, works like a solar panel that catches sunlight.\n- While cooking, plants release oxygen, which we breathe, so photosynthesis feeds the plant and helps us too."
+  },
+  {
+    "id": 2,
+    "title": "Leave email to manager",
+    "task": "Write an email to my manager asking for leave.",
+    "role": "a professional business writing assistant",
+    "context": "I am an employee requesting 2 days of leave next week (Thursday and Friday) for a family function. My manager is busy and prefers short emails.",
+    "constraints": [
+      "Keep the email under 90 words.",
+      "Use a polite and formal tone.",
+      "Mention that pending work will be handed over before leaving.",
+      "Do not add any text outside the email."
+    ],
+    "output_format": "Start with 'Subject:' line, then greeting, a short body, and closing.",
+    "checks": {
+      "max_words": 90,
+      "subject_line": true,
+      "no_intro": true
+    },
+    "basic_output": "Sure! Here is an email you can use:\n\nDear Manager,\n\nI hope this email finds you well. I am writing to formally request some leave from work. Due to some personal reasons that have come up, I would be grateful if you could kindly approve my leave request for the dates I have in mind. I understand that this may cause some inconvenience to the team and I sincerely apologize for it in advance. I will make sure that all my important tasks are completed before I leave and I will be available on phone in case of any emergency. Please let me know if you need any further details or if there is anything else I should do before going on leave. Thank you very much for your time and understanding.\n\nYours sincerely,\n[Your Name]",
+    "improved_output": "Subject: Leave Request - Thursday and Friday, Next Week\n\nDear [Manager's Name],\n\nI would like to request two days of leave next Thursday and Friday for a family function. I will hand over all pending work before leaving and stay reachable for urgent matters.\n\nPlease let me know if this is approved.\n\nThank you,\n[Your Name]"
+  },
+  {
+    "id": 3,
+    "title": "Benefits of exercise",
+    "task": "Tell me the benefits of exercise.",
+    "role": "a fitness coach who writes for students",
+    "context": "The reader is a busy college student who needs quick motivation.",
+    "constraints": [
+      "Use exactly 4 bullet points.",
+      "Each bullet must be under 15 words.",
+      "Keep the total answer under 60 words.",
+      "Do not add an introduction or a conclusion."
+    ],
+    "output_format": "4 bullet points starting with '-'.",
+    "checks": {
+      "max_words": 60,
+      "bullets": 4,
+      "no_intro": true
+    },
+    "basic_output": "Exercise has many benefits for both the body and the mind. Physically, it strengthens your heart and lungs, builds muscle and bone strength, helps control body weight and reduces the risk of diseases such as diabetes, high blood pressure and some cancers. Mentally, regular exercise releases endorphins which improve mood, reduces stress and anxiety, and can help with depression. It also improves sleep quality, boosts energy levels, sharpens memory and concentration, and can improve self-confidence. Exercising with others can also improve your social life. Overall, even moderate activity like walking for thirty minutes a day can make a big difference to your health and quality of life.",
+    "improved_output": "- Boosts focus and memory, so studying feels easier.\n- Lowers stress and exam anxiety within minutes.\n- Improves sleep, so you wake up fresher.\n- Gives steady energy without extra coffee."
+  },
+  {
+    "id": 4,
+    "title": "Palindrome function",
+    "task": "Write a Python function to check if a string is a palindrome.",
+    "role": "a senior Python developer",
+    "context": "The function will be used in a beginner-friendly project, so the code must be easy to read.",
+    "constraints": [
+      "Ignore case, spaces and punctuation.",
+      "Include a docstring.",
+      "Keep the explanation to 2 lines.",
+      "Do not add any text before the code."
+    ],
+    "output_format": "One fenced Python code block, followed by a 2-line explanation.",
+    "checks": {
+      "code_block": true,
+      "max_words": 90,
+      "no_intro": true
+    },
+    "basic_output": "Sure! A palindrome is a word that reads the same forwards and backwards. There are many ways to check this in Python. The simplest way is to reverse the string using slicing and compare it with the original string. If both are equal then it is a palindrome. For example you can take the input string, reverse it with s[::-1], and use an if statement to compare. You can also use a loop with two pointers, one starting at the beginning and one at the end, moving towards the centre and comparing characters. Slicing is shorter and more Pythonic so it is usually preferred for simple cases like this one.",
+    "improved_output": "```python\ndef is_palindrome(text):\n    \"\"\"Return True if text reads the same forwards and backwards.\"\"\"\n    cleaned = [c.lower() for c in text if c.isalnum()]\n    return cleaned == cleaned[::-1]\n```\nIt keeps only letters and digits in lowercase.\nThen it compares the list with its reverse."
+  },
+  {
+    "id": 5,
+    "title": "7-day study plan",
+    "task": "Make a study plan for my exam.",
+    "role": "an experienced academic mentor",
+    "context": "I have a Data Structures exam in 7 days and can study about 3 hours per day. Topics: arrays, linked lists, stacks, queues, trees, graphs, sorting.",
+    "constraints": [
+      "Cover all 7 topics across 7 days.",
+      "Maximum 3 hours per day.",
+      "Keep the answer under 100 words excluding the table.",
+      "Do not add an introduction or a conclusion."
+    ],
+    "output_format": "A Markdown table with columns: Day | Topic | Hours.",
+    "checks": {
+      "table": true,
+      "no_intro": true
+    },
+    "basic_output": "Great, preparing for an exam needs a good plan! First, find out the syllabus and the exam pattern. Then divide the syllabus into small parts and give more time to the difficult topics. Study in sessions of 45 to 50 minutes with short breaks in between. Make notes and flashcards, solve previous year question papers, and revise regularly. Do not forget to sleep well and eat healthy food. In the last two days, only revise and avoid starting new topics. Tell me your subject and exam date and I can make a more detailed plan for you.",
+    "improved_output": "| Day | Topic | Hours |\n|---|---|---|\n| 1 | Arrays | 3 |\n| 2 | Linked lists | 3 |\n| 3 | Stacks and queues | 3 |\n| 4 | Trees | 3 |\n| 5 | Graphs | 3 |\n| 6 | Sorting | 3 |\n| 7 | Revision and mock test | 3 |"
+  }
+]
